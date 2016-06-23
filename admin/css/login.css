@@ -1,0 +1,27 @@
+#login
+{
+	height:auto;
+	width:500px;
+	margin: 3em auto;
+}
+
+@media (max-width: 720px) 
+{
+	#login
+	{
+		height:auto;
+		width:200px;
+		margin: 3em auto;
+	}
+}
+
+.login
+{
+	float:left;
+	font-family:Microsoft YaHei Light,Microsoft YaHei,SimSun;
+	font-size:1em;
+	margin:5px 0 0 5px;
+	text-align:center;
+	box-shadow:0px 0px 5px #000000;
+}
+

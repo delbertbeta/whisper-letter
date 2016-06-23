@@ -1,0 +1,15 @@
+body
+{
+	margin:0;
+	font-family:Microsoft YaHei Light,Microsoft YaHei,SimSun;
+	background:url("/image/background.jpg");
+	background-repeat:no-repeat;
+	background-position:100% -10%;
+	background-attachment:fixed;
+}
+
+
+a:link {text-decoration:none;}
+a:visited {text-decoration:none;}
+a:hover {text-decoration:underline;}
+a:active {text-decoration:underline;}

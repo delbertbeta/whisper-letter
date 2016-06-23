@@ -13,5 +13,6 @@
 ###默认密码在sql的user表单下，账号admin 密码whisperletter，请自行修改！！！一定要修改
 ---
 可以替换./background.jpg的方法替换背景图片，格式自己看咯。
+想修改网页上默认的文字的，请直接修改./index.html
 
 谢谢支持！！

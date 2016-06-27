@@ -14,7 +14,7 @@
 安装方法：
 * Clone这个项目，并配置nginx或者apache
 * 导入./sql/memory.sql到mysql中,默认数据库为memory, ~~如果你懒得改就直接这样建就好了。~~**建库请选UTF-8**。
-* 修改./upload.php ./admin/veryfy.php中mysql的数据库账号、密码和数据库名称。
+* 修改./upload.php ./admin/veryfy.php ./admin/admin.php 中mysql的数据库账号、密码和数据库名称。
 
 ###默认密码在sql的admin表单下，账号admin 密码whisperletter，请自行修改！！！**一定要修改！！！**
 ---

@@ -1,5 +1,4 @@
-<?php
-	#Á¬½ÓÊı¾İ¿â²¿·Ö
+ï»¿<?php
 	$con = mysql_connect("localhost","root","");
 	mysql_set_charset("utf8",$con);
 	if (!$con)
@@ -15,24 +14,31 @@
 	$sqlFindUser = "SELECT * FROM admin WHERE user = '{$inputUser}'";
 	$row = mysql_query($sqlFindUser);
 	$result = mysql_fetch_array($row);
+	if($inputUser == '' || $inputPw == '')
+	{
+                mysql_close($con);
+                echo '<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>';
+                echo ("<script type='text/javascript'>{alert(â€˜è¾“å…¥è´¦å·å¯†ç å•Šäº²');window.location = './';} </script>");
+
+	}
 	if (!$result)
 	{
 		mysql_close($con);
-		echo '<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />';
-		echo ("<script type='text/javascript'>{alert('ÓÃ»§Ãû»òÃÜÂë´íÎó');window.location = './';} </script>");
+		echo '<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>';
+		echo ("<script type='text/javascript'>{alert('ç”¨æˆ·åæˆ–å¯†ç ä¸æ­£ç¡®');window.location = './';} </script>");
 	}
-	if ($result['password'] == $inputPw)
+	if ($result['password'] !== $inputPw)
 	{
-		mysql_close($con);
-		session_start();
-		$_SESSION['flag'] = 1;
-		echo ("<script type='text/javascript'>{window.location = './admin.php';} </script>");
+                mysql_close($con);
+                echo '<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>';
+                echo ("<script type='text/javascript'>{alert(â€˜ç”¨æˆ·åæˆ–å¯†ç ä¸æ­£ç¡®');window.location = './';} </script>");
 	}
 	else
 	{
-		mysql_close($con);
-		echo '<meta charset="gb22312" />';
-		echo ("<script type='text/javascript'>{alert('ÓÃ»§Ãû»òÃÜÂë´íÎó');window.location = './';} </script>");
+                mysql_close($con);
+                session_start();
+                $_SESSION['flag'] = 1;
+                echo ("<script type='text/javascript'>{window.location = './admin.php';} </script>");
 	}
 	mysql_close($con);
 ?>

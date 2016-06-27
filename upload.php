@@ -1,5 +1,4 @@
-<?php
-	#连接数据库部分
+﻿<?php
 	$con = mysql_connect("localhost","root","");
 	mysql_set_charset("utf8",$con);
 	if (!$con)
@@ -18,6 +17,7 @@
 	$sql = "INSERT INTO `letters` (`number`, `time`, `letter`) VALUES (NULL, '{$datetime}', '{$letter}');";
 	if(mysql_query($sql))
 	{
+		echo '<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>';
 		echo ("<script type='text/javascript'>{alert('你的心意已经发送出去了哟~谢谢，除了谢谢还是谢谢！');window.location = './';}</script>");
 	}
 	else

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
@@ -38,7 +38,7 @@
         {
             echo mysql_error();
         }
-		$result = mysql_query("SELECT * FROM letters ORDER BY number");
+		$result = mysql_query("SELECT * FROM letters ORDER BY time DESC");
 		while( $aData = mysql_fetch_array($result) )
 		{
 			echo ('<textarea class="data" readonly="readonly">');
